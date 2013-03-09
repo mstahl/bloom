@@ -1,6 +1,8 @@
 # bloom
 
-Use bloom filters of various kinds to speed up your stuff.
+I wanted to answer the question of how difficult it would be to implement a
+reasonably-fast bloom filter in Ruby. Turns out it's not that hard and doesn't
+take a lot of code to make that dream come true.
 
 ## Usage
 
@@ -27,6 +29,16 @@ If this method returns `false`, the element is most definitely not in the set,
 but if it returns `true` there is a probability that a false positive has been
 given. This probability is returned by the `#false_positive_probability`
 method.
+
+## Caveats
+
+The reason this code is so simple is because I borrowed Ruby's `Object#hash`
+method, which is defined for all objects of all kinds. I have not looked into
+the distribution of the `Object#hash` method, but bloom filters do not work
+very well if the distribution of their component hash functions is not uniform
+or close to uniform. This will require further investigation. I mostly wrote
+this to show how easily a bloom filter can be implemented using the magic of
+Ruby.
 
 ## Contributing to bloom
  

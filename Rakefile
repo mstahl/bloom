@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "bloom"
   gem.homepage = "http://github.com/mstahl/bloom"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Super simple bloom filter}
+  gem.description = %Q{I made a bloom filter in Ruby to remember how bloom filters work}
   gem.email = "max@villainousindustries.com"
   gem.authors = ["max thom stahl"]
   # dependencies defined in Gemfile
