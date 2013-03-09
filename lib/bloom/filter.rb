@@ -1,9 +1,5 @@
 module Bloom
-  class Bloom
-    DEFAULTS = {
-      m: 256,
-      k: 8
-    }
+  class Filter
     attr_reader :bitfield
     attr_reader :k
     attr_reader :m
